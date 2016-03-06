@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "colorPrimary">#3F51B5</color>
+    <color name = "colorPrimaryDark">#303F9F</color>
+    <color name = "colorAccent">#FF4081</color>
+
+
+    <!--Mine using-->
+
+    <color name = "Gray">#939393</color>
+    <color name = "Yellow">#EDBF32</color>
+    <color name = "White">#ffffff</color>
+    <color name = "Black_Transparent">#99000000</color>
+    <color name = "Gray_Transparent">#CC333743</color>
+
+
+    <color name="Tabs_Background">#E1E1E1</color>
+    <color name="Indicator">#da3633</color>
+
+
+    <item name="cream_color" type="color">#EEEEEE</item>
+
+
+    <!--Mine Not using-->
+
+
+    <color name = "GrayLight">#ededee</color>
+    <color name = "GrayHot">#272727</color>
+
+
+
+    <color name = "Black">#000000</color>
+
+
+
+
+    <color name = "Blue">#00ADC9</color>
+    <color name = "Blue_dark">#0094C9</color>
+    <color name = "Background_Gray">#E4E4E4</color>
+    <color name = "Red">#FB002A</color>
+
+
+
+
+
+</resources>
