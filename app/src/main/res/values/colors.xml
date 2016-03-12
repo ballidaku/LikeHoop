@@ -36,8 +36,21 @@
 
     <color name = "Blue">#00ADC9</color>
     <color name = "Blue_dark">#0094C9</color>
+
+    <color name = "Blue_hard">#114563</color>
+    <color name = "Blue_hard_dark">#001C2D</color>
+
+
     <color name = "Background_Gray">#E4E4E4</color>
     <color name = "Red">#FB002A</color>
+
+
+    <color name="tabMedium">#2B2B2B</color>
+    <color name="tabDark">#000000</color>
+    <color name="tabTransparent">#10ffffff</color>
+
+
+    <color name="tab_background_black">#27292B</color>
 
 
 

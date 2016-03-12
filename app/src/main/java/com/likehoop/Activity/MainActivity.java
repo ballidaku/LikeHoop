@@ -1,40 +1,61 @@
 package com.likehoop.Activity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.TabActivity;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TabHost;
 
 import com.likehoop.R;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
+{
+    TabHost tabHost;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+//    int[] images_selected = {R.mipmap.ic_home, R.mipmap.ic_search, R.mipmap.ic_camera, R.mipmap.ic_like_tab, R.mipmap.ic_profile};
+
+
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        tabHost = getTabHost();
+        setTabs();
+
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+
+
+    private void setTabs()
+    {
+        addTab("Home", getResources().getDrawable(R.drawable.selector_home), Share.class);
+        addTab("Search",getResources().getDrawable(R.drawable.selector_search), Search.class);
+        addTab("Camera",getResources().getDrawable(R.drawable.selector_search) , SignUp.class);
+        addTab("Favourite",getResources().getDrawable(R.drawable.selector_favourite), SignUp.class);
+        addTab("Profile",getResources().getDrawable(R.drawable.selector_profile), SignUp.class);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    private void addTab(String labelId, Drawable drawableId, Class<?> c)
+    {
+        Intent intent = new Intent(this, c);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        TabHost.TabSpec spec = tabHost.newTabSpec("tab" + labelId);
 
-        return super.onOptionsItemSelected(item);
+        View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator, getTabWidget(), false);
+
+        ImageView icon = (ImageView) tabIndicator.findViewById(R.id.icon);
+        icon.setImageDrawable(drawableId);
+        spec.setIndicator(tabIndicator);
+
+        spec.setContent(intent);
+        tabHost.addTab(spec);
     }
+
+
+
 }

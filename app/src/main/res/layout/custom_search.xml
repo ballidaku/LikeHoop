@@ -22,6 +22,7 @@
                 android:id="@+id/imgv_profile_pic"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
                 android:src="@mipmap/user" />
 
             <TextView
@@ -42,6 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
                 android:src="@mipmap/ic_follow" />
 
         </LinearLayout>
@@ -51,7 +54,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardUseCompatPadding="true"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             card_view:cardCornerRadius="10dp"
             card_view:cardElevation="5dp" >
 
@@ -205,7 +209,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:padding="8dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="15dp"
+                        android:paddingLeft="15dp"
                         android:src="@mipmap/ic_three_dots" />
 
 
@@ -218,13 +225,13 @@
 
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/txtv_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:padding="10dp"
+                    android:minHeight="70dp"
                     android:text="John Dio Lorem lpsum is simply dummy text of the printing and typesetting industry"
-                    android:textColor="@color/Black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    />
 
 
             </LinearLayout>
