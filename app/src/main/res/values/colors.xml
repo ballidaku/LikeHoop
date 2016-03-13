@@ -10,6 +10,11 @@
     <color name = "Gray">#939393</color>
     <color name = "Yellow">#EDBF32</color>
     <color name = "White">#ffffff</color>
+
+    <color name = "White_light">#80ffffff</color>
+    <color name = "White_dark">#CCffffff</color>
+
+
     <color name = "Black_Transparent">#99000000</color>
     <color name = "Gray_Transparent">#CC333743</color>
 
@@ -26,6 +31,12 @@
 
     <color name = "GrayLight">#ededee</color>
     <color name = "GrayHot">#272727</color>
+
+
+    <color name = "GrayTabLight">#F1F1F1</color>
+    <color name = "GrayTabDark">#E6E6E6</color>
+
+
 
 
 
@@ -51,6 +62,7 @@
 
 
     <color name="tab_background_black">#27292B</color>
+    <color name="tab_background_black_selected">#303333</color>
 
 
 

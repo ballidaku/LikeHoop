@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:layout_weight="1"
+    android:background="@color/GrayLight"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtv_tabname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25"
+        android:textStyle="bold"
+        android:textColor="@color/Blue"
+        android:textSize="16sp"/>
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:textColor="@color/White"
+        android:textSize="14sp"/>-->
+
+</LinearLayout>

@@ -46,6 +46,14 @@
         </activity>
         <activity android:name=".Activity.ProfileTab.Followers">
         </activity>
+        <activity android:name=".Activity.SignInSignUpPage">
+        </activity>
+        <activity android:name=".Activity.Favourite">
+        </activity>
+        <activity android:name=".Activity.FovouriteTab.FavouriteFollowing">
+        </activity>
+        <activity android:name=".Activity.FovouriteTab.FavouriteYou">
+        </activity>
     </application>
 
 </manifest>

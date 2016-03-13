@@ -2,11 +2,13 @@ package com.likehoop.Activity;
 
 import android.app.Activity;
 import android.app.TabActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -19,24 +21,39 @@ import com.likehoop.R;
 public class Profile extends TabActivity
 {
     TabHost tabHost;
+    Context con;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
+        con = this;
 
         tabHost = getTabHost();
         setTabs();
-    }
+        setTabColor();
 
+        tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener()
+        {
+            @Override
+            public void onTabChanged(String tabId)
+            {
+                setTabColor();
+            }
+        });
+
+
+
+
+    }
 
 
     private void setTabs()
     {
-        addTab("Post", "25", Post.class);
-        addTab("Following","160", Following.class);
-        addTab("Followers","90" , Followers.class);
+        addTab("Post", "25", Following.class);
+        addTab("Following", "160", Following.class);
+        addTab("Followers", "90", Following.class);
 
     }
 
@@ -55,4 +72,16 @@ public class Profile extends TabActivity
         spec.setContent(intent);
         tabHost.addTab(spec);
     }
+
+
+    public  void setTabColor()
+    {
+        for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++)
+        {
+            tabHost.getTabWidget().getChildAt(i).setBackgroundColor(con.getResources().getColor(R.color.tab_background_black)); //unselected
+        }
+        tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundColor(getResources().getColor(R.color.tab_background_black_selected)); // selected
+    }
+
+
 }

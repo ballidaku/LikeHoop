@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/background_two"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+
+    <com.likehoop.HelperClasses.AutoScrollViewPager
+        android:id="@+id/pager_splash"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+    </com.likehoop.HelperClasses.AutoScrollViewPager>
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_white"
+            android:text="Sign In"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/Blue_hard"/>
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Sign Up"
+            android:background="@drawable/blue_selector"
+            android:textColor="@color/White"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

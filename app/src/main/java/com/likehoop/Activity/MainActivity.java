@@ -36,8 +36,8 @@ public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
         addTab("Home", getResources().getDrawable(R.drawable.selector_home), Share.class);
         addTab("Search",getResources().getDrawable(R.drawable.selector_search), Search.class);
         addTab("Camera",getResources().getDrawable(R.drawable.selector_search) , SignUp.class);
-        addTab("Favourite",getResources().getDrawable(R.drawable.selector_favourite), SignUp.class);
-        addTab("Profile",getResources().getDrawable(R.drawable.selector_profile), SignUp.class);
+        addTab("Favourite",getResources().getDrawable(R.drawable.selector_favourite), Favourite.class);
+        addTab("Profile",getResources().getDrawable(R.drawable.selector_profile), Profile.class);
     }
 
     private void addTab(String labelId, Drawable drawableId, Class<?> c)
@@ -46,7 +46,7 @@ public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
 
         TabHost.TabSpec spec = tabHost.newTabSpec("tab" + labelId);
 
-        View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator, getTabWidget(), false);
+        View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator_profile, getTabWidget(), false);
 
         ImageView icon = (ImageView) tabIndicator.findViewById(R.id.icon);
         icon.setImageDrawable(drawableId);
