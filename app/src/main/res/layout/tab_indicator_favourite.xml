@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/llay_fav"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="55dip"
+    android:layout_height="50dip"
     android:layout_weight="1"
-    android:background="@color/GrayLight"
+    android:background="@mipmap/ic_fav_unselected"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -15,7 +16,7 @@
         android:text="25"
         android:textStyle="bold"
         android:textColor="@color/Blue"
-        android:textSize="16sp"/>
+        android:textSize="14sp"/>
 
 
     <!--<TextView

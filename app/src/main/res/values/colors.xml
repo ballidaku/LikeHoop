@@ -29,12 +29,12 @@
     <!--Mine Not using-->
 
 
-    <color name = "GrayLight">#ededee</color>
-    <color name = "GrayHot">#272727</color>
+    <color name = "GrayLight">#FFF1F1F1</color>
+    <color name = "GrayHot">#FFE6E6E6</color>
 
 
-    <color name = "GrayTabLight">#F1F1F1</color>
-    <color name = "GrayTabDark">#E6E6E6</color>
+    <color name = "GrayTabLight">#E2E2E2</color>
+    <color name = "GrayTabDark">#CECECE</color>
 
 
 

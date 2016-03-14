@@ -11,8 +11,7 @@
     <TabHost
         android:id="@android:id/tabhost"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@android:color/transparent">
+        android:layout_height="fill_parent">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -23,9 +22,7 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/GrayLight"
-                android:showDividers="none"/>
+                android:layout_height="wrap_content"/>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"

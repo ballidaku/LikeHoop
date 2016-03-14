@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -31,14 +32,15 @@ public class Favourite extends TabActivity
 
         tabHost = getTabHost();
         setTabs();
-        setTabColor();
+        tabHost.getTabWidget().setDividerDrawable(getResources().getDrawable(R.mipmap.ic_blue_divider));
+//        setTabColor();
 
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener()
         {
             @Override
             public void onTabChanged(String tabId)
             {
-                setTabColor();
+//                setTabColor();
             }
         });
     }
@@ -48,7 +50,7 @@ public class Favourite extends TabActivity
     private void setTabs()
     {
         addTab("FOLLOWING", FavouriteFollowing.class);
-        addTab("YOU", FavouriteYou.class);
+        addTab("YOU", FavouriteFollowing.class);
 
     }
 
@@ -60,8 +62,11 @@ public class Favourite extends TabActivity
 
         View tabIndicator = LayoutInflater.from(this).inflate(R.layout.tab_indicator_favourite, getTabWidget(), false);
 
+        LinearLayout llay_fav=(LinearLayout)tabIndicator.findViewById(R.id.llay_fav);
         TextView txtv_tabname = (TextView) tabIndicator.findViewById(R.id.txtv_tabname);
         txtv_tabname.setText(labelId);
+
+        llay_fav.setBackgroundDrawable(getResources().getDrawable(R.drawable.selector_fav));
         spec.setIndicator(tabIndicator);
 
         spec.setContent(intent);
