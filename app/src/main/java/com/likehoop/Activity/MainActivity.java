@@ -3,13 +3,18 @@ package com.likehoop.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 
 import com.likehoop.R;
+
+import java.io.File;
 
 
 public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
@@ -30,14 +35,13 @@ public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
     }
 
 
-
     private void setTabs()
     {
-        addTab("Home", getResources().getDrawable(R.drawable.selector_home), Share.class);
-        addTab("Search",getResources().getDrawable(R.drawable.selector_search), Search.class);
-        addTab("Camera",getResources().getDrawable(R.drawable.selector_search) , SignUp.class);
-        addTab("Favourite",getResources().getDrawable(R.drawable.selector_favourite), Favourite.class);
-        addTab("Profile",getResources().getDrawable(R.drawable.selector_profile), Profile.class);
+        addTab("Home", getResources().getDrawable(R.drawable.selector_home), Search.class);
+        addTab("Search", getResources().getDrawable(R.drawable.selector_search), Search_Initial.class);
+        addTab("Camera", getResources().getDrawable(R.drawable.selector_search), SignUp.class);
+        addTab("Favourite", getResources().getDrawable(R.drawable.selector_favourite), Favourite.class);
+        addTab("Profile", getResources().getDrawable(R.drawable.selector_profile), Profile.class);
     }
 
     private void addTab(String labelId, Drawable drawableId, Class<?> c)
@@ -56,6 +60,21 @@ public class MainActivity extends TabActivity /*implements OnTabChangeListener*/
         tabHost.addTab(spec);
     }
 
+
+    public void open_camera(View view)
+    {
+        Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent, 0);
+    }
+
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+
+       /* Bitmap bp = (Bitmap) data.getExtras().get("data");
+        iv.setImageBitmap(bp);*/
+    }
 
 
 }

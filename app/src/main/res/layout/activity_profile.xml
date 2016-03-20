@@ -18,6 +18,15 @@
             android:background="@mipmap/profile_bg"/>
 
 
+        <ImageView
+            android:id="@+id/imgv_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="10dp"
+            android:src="@mipmap/ic_settings"/>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

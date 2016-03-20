@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context="com.likehoop.Activity.Favourite">
 
+    <include layout="@layout/header" />
+
 
     <TabHost
         android:id="@android:id/tabhost"

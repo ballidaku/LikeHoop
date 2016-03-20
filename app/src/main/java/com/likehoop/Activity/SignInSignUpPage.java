@@ -4,6 +4,7 @@ package com.likehoop.Activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,6 +21,7 @@ public class SignInSignUpPage extends Activity implements View.OnClickListener
     AutoScrollViewPager pager;
     CirclePageIndicator page_indicator;
     private ArrayList<Integer> imageIdList = new ArrayList<>();
+
 
     Context con;
     @Override protected
@@ -59,19 +61,20 @@ public class SignInSignUpPage extends Activity implements View.OnClickListener
     {
         switch (v.getId())
         {
-           /* case R.id.btn_login:
+            case R.id.btn_login:
 
                 startActivity(new Intent(con,Login.class));
+                finish();
                 break;
 
             case R.id.btn_signup:
 
                 startActivity(new Intent(con,SignUp.class));
-
+                finish();
                 break;
 
             default:
-                break;*/
+                break;
 
         }
     }

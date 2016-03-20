@@ -18,7 +18,7 @@ import com.likehoop.Activity.ProfileTab.Following;
 import com.likehoop.Activity.ProfileTab.Post;
 import com.likehoop.R;
 
-public class Profile extends TabActivity
+public class Profile extends TabActivity implements View.OnClickListener
 {
     TabHost tabHost;
     Context con;
@@ -43,7 +43,7 @@ public class Profile extends TabActivity
             }
         });
 
-
+        findViewById(R.id.imgv_settings).setOnClickListener(this);
 
 
     }
@@ -74,13 +74,32 @@ public class Profile extends TabActivity
     }
 
 
-    public  void setTabColor()
+    public void setTabColor()
     {
         for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++)
         {
             tabHost.getTabWidget().getChildAt(i).setBackgroundColor(con.getResources().getColor(R.color.tab_background_black)); //unselected
         }
         tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundColor(getResources().getColor(R.color.tab_background_black_selected)); // selected
+    }
+
+    @Override public
+    void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.imgv_settings:
+
+                startActivity(new Intent(con, Settings.class));
+
+                break;
+
+
+
+            default:
+                break;
+
+        }
     }
 
 

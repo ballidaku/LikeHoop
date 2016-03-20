@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +50,10 @@ public class Favourite extends TabActivity
 
     private void setTabs()
     {
+        Typeface tf = Typeface.createFromAsset(getAssets(),"Lobster.otf");
+        TextView tv = (TextView) findViewById(R.id.txtv_header);
+        tv.setTypeface(tf);
+
         addTab("FOLLOWING", FavouriteFollowing.class);
         addTab("YOU", FavouriteFollowing.class);
 

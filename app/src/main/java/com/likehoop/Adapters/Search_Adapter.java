@@ -1,13 +1,16 @@
 package com.likehoop.Adapters;
 
+import android.content.Intent;
 import android.text.Html;
 import android.widget.BaseAdapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.likehoop.Activity.Share;
 import com.likehoop.R;
 
 /**
@@ -59,6 +62,15 @@ public class Search_Adapter extends BaseAdapter
         String styledText = "<font color='Black' style='font-size:9px;'><b>John Dio </b></font><font color='Gray' style='font-size:4small'> Lorem lpsum is simply dummy text of the printing and typesetting industry</font>";
         txtv_details.setText(Html.fromHtml(styledText));
 
+        ImageView imgv_three_dots  = (ImageView) row.findViewById(R.id.imgv_three_dots);
+        imgv_three_dots.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+               con.startActivity(new Intent(con, Share.class));
+            }
+        });
 
         /*ImageView imgv_marker = (ImageView) row.findViewById(R.id.imgv_marker);
         ImageView imgv_call   = (ImageView) row.findViewById(R.id.imgv_call);

@@ -2,6 +2,7 @@ package com.likehoop.Activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -10,15 +11,17 @@ import android.widget.TextView;
 
 import com.likehoop.R;
 
-public class Share extends Activity implements View.OnClickListener
+public class EditProfile extends Activity implements View.OnClickListener
 {
+
     Context con;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_share);
+        setContentView(R.layout.activity_edit_profile);
+
         con = this;
 
         setUpIDS();
@@ -31,9 +34,9 @@ public class Share extends Activity implements View.OnClickListener
         Typeface tf = Typeface.createFromAsset(getAssets(), "Lobster.otf");
         TextView tv = (TextView) findViewById(R.id.txtv_header);
         tv.setTypeface(tf);
-        tv.setText("Share");
+        tv.setText("Edit Profile");
 
-        ImageView imgv_back = (ImageView) findViewById(R.id.imgv_back);
+        ImageView imgv_back=(ImageView)findViewById(R.id.imgv_back);
         imgv_back.setVisibility(View.VISIBLE);
         imgv_back.setOnClickListener(this);
 
@@ -42,8 +45,8 @@ public class Share extends Activity implements View.OnClickListener
     }
 
 
-    @Override
-    public void onClick(View v)
+    @Override public
+    void onClick(View v)
     {
         switch (v.getId())
         {
@@ -62,4 +65,5 @@ public class Share extends Activity implements View.OnClickListener
 
         }
     }
+
 }

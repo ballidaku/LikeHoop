@@ -26,7 +26,7 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:showDividers="none"
                 android:background="#001C2D"/>
         </LinearLayout>
@@ -38,6 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
-        android:src="@mipmap/ic_camera"/>
+        android:onClick="open_camera"
+        android:src="@mipmap/camera_two"/>
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.likehoop"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest
+    package="com.likehoop"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -22,37 +23,72 @@
         </activity>
         <activity
             android:name=".Activity.Entrance"
-            android:label="@string/title_activity_entrance">
+            android:label="@string/title_activity_entrance"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
             android:name=".Activity.Login"
-            android:label="@string/title_activity_login">
+            android:label="@string/title_activity_login"
+            android:theme="@style/MyTheme">
         </activity>
         <activity
             android:name=".Activity.SignUp"
-            android:label="@string/title_activity_sign_up">
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/MyTheme">
         </activity>
         <activity
             android:name=".Activity.Search"
-            android:label="@string/title_activity_search">
+            android:label="@string/title_activity_search"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.Share">
+        <activity
+            android:name=".Activity.Share"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         </activity>
-        <activity android:name=".Activity.Profile">
+        <activity
+            android:name=".Activity.Profile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.ProfileTab.Post">
+        <activity
+            android:name=".Activity.ProfileTab.Post"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.ProfileTab.Following">
+        <activity
+            android:name=".Activity.ProfileTab.Following"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.ProfileTab.Followers">
+        <activity
+            android:name=".Activity.ProfileTab.Followers"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.SignInSignUpPage">
+        <activity
+            android:name=".Activity.SignInSignUpPage"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.Favourite">
+        <activity
+            android:name=".Activity.Favourite"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.FovouriteTab.FavouriteFollowing">
+        <activity
+            android:name=".Activity.FovouriteTab.FavouriteFollowing"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activity.FovouriteTab.FavouriteYou">
+        <activity
+            android:name=".Activity.FovouriteTab.FavouriteYou"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Activity.Settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Activity.EditProfile"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Activity.Search_Initial"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
     </application>
 

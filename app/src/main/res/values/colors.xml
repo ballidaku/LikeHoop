@@ -35,6 +35,11 @@
 
     <color name = "GrayTabLight">#E2E2E2</color>
     <color name = "GrayTabDark">#CECECE</color>
+    <color name = "switch_green">#00C24B</color>
+    <color name = "switch_gray">#B3B3B3</color>
+
+
+
 
 
 
@@ -47,6 +52,9 @@
 
     <color name = "Blue">#00ADC9</color>
     <color name = "Blue_dark">#0094C9</color>
+    <color name = "Header_Blue">#00BDDB</color>
+
+
 
     <color name = "Blue_hard">#114563</color>
     <color name = "Blue_hard_dark">#001C2D</color>
