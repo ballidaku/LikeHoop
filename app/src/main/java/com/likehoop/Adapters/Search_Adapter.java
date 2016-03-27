@@ -23,9 +23,12 @@ public class Search_Adapter extends BaseAdapter
 
 //    Constant_Class constant     = new Constant_Class();
 
-    public Search_Adapter(Context con/*, ArrayList<HashMap<String, String>> list*/)
+    int i;
+
+    public Search_Adapter(Context con,int i/*, ArrayList<HashMap<String, String>> list*/)
     {
         this.con = con;
+        this.i=i;
 //        this.list = list;
     }
 
@@ -58,6 +61,12 @@ public class Search_Adapter extends BaseAdapter
         row = inflater.inflate(R.layout.custom_search, parent, false);
 
         TextView txtv_details = (TextView) row.findViewById(R.id.txtv_details);
+        ImageView imgv_follow = (ImageView) row.findViewById(R.id.imgv_follow);
+
+        if(i==0)
+        {
+            imgv_follow.setVisibility(View.GONE);
+        }
 
         String styledText = "<font color='Black' style='font-size:9px;'><b>John Dio </b></font><font color='Gray' style='font-size:4small'> Lorem lpsum is simply dummy text of the printing and typesetting industry</font>";
         txtv_details.setText(Html.fromHtml(styledText));

@@ -41,12 +41,15 @@ public class Search extends Activity implements View.OnClickListener
         ImageView imgv_back = (ImageView) findViewById(R.id.imgv_back);
         imgv_back.setOnClickListener(this);
 
+        int i=0;
         try
         {
             if(getIntent().getStringExtra("from_where").equals("Search_Initial"))
             {
+                i=1;
                 imgv_back.setVisibility(View.VISIBLE);
             }
+
         }
         catch(Exception e)
         {
@@ -54,7 +57,7 @@ public class Search extends Activity implements View.OnClickListener
 
         lv_search=(ListView)findViewById(R.id.lv_search);
 
-        adapter=new Search_Adapter(con);
+        adapter=new Search_Adapter(con,i);
 
         lv_search.setAdapter(adapter);
     }

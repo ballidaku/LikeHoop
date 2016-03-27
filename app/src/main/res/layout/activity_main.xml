@@ -39,6 +39,6 @@
         android:layout_centerHorizontal="true"
         android:background="@android:color/transparent"
         android:onClick="open_camera"
-        android:src="@mipmap/camera_two"/>
+        android:src="@drawable/camera_two"/>
 
 </RelativeLayout>
