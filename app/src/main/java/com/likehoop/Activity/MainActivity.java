@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 
+import com.likehoop.Activity.FovouriteTab.FavouriteFollowing;
+import com.likehoop.Activity.FovouriteTab.FavouriteYou;
 import com.likehoop.R;
 
 import java.io.File;

@@ -48,7 +48,8 @@ public class Splash extends AppCompatActivity {
                     }
                     else
                     {*/
-                    startActivity(new Intent(Splash.this, SignInSignUpPage.class));
+//                    startActivity(new Intent(Splash.this, SignInSignUpPage.class));
+                    startActivity(new Intent(Splash.this, GalleryImagesVideos.class));
 //                    }
                     finish();
 

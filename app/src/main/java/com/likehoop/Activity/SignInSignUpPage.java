@@ -6,10 +6,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.likehoop.Adapters.ImagePagerAdapter;
 import com.likehoop.HelperClasses.AutoScrollViewPager;
+import com.likehoop.HelperClasses.HelperS;
 import com.likehoop.R;
 import com.viewpagerindicator.CirclePageIndicator;
 
@@ -53,6 +55,9 @@ public class SignInSignUpPage extends Activity implements View.OnClickListener
 
         findViewById(R.id.btn_login).setOnClickListener(this);
         findViewById(R.id.btn_signup).setOnClickListener(this);
+
+
+
 
     }
 

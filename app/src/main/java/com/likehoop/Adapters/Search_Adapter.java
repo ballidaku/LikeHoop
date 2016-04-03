@@ -61,11 +61,16 @@ public class Search_Adapter extends BaseAdapter
         row = inflater.inflate(R.layout.custom_search, parent, false);
 
         TextView txtv_details = (TextView) row.findViewById(R.id.txtv_details);
+        TextView txtv_time = (TextView) row.findViewById(R.id.txtv_time);
         ImageView imgv_follow = (ImageView) row.findViewById(R.id.imgv_follow);
 
         if(i==0)
         {
             imgv_follow.setVisibility(View.GONE);
+        }
+        else
+        {
+            txtv_time.setVisibility(View.GONE);
         }
 
         String styledText = "<font color='Black' style='font-size:9px;'><b>John Dio </b></font><font color='Gray' style='font-size:4small'> Lorem lpsum is simply dummy text of the printing and typesetting industry</font>";

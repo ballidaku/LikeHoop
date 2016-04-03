@@ -9,29 +9,37 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.likehoop.Activity.FovouriteTab.FavouriteFollowing;
 import com.likehoop.Activity.FovouriteTab.FavouriteYou;
 import com.likehoop.Activity.ProfileTab.Following;
+import com.likehoop.Adapters.FavouriteFollowing_Adapter;
 import com.likehoop.R;
 
-public class Favourite extends TabActivity
+public class Favourite extends Activity/*TabActivity*/
 {
-    TabHost tabHost;
+    //    TabHost tabHost;
+    ListView lv_following;
+
     Context con;
+    FavouriteFollowing_Adapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourite);
+        setContentView(R.layout.activity_favourite_following);
 
         con = this;
 
-        tabHost = getTabHost();
+
+        setUpIDS();
+
+        /*tabHost = getTabHost();
         setTabs();
         tabHost.getTabWidget().setDividerDrawable(getResources().getDrawable(R.mipmap.ic_blue_divider));
 //        setTabColor();
@@ -43,12 +51,30 @@ public class Favourite extends TabActivity
             {
 //                setTabColor();
             }
-        });
+        });*/
+    }
+
+
+    public void setUpIDS()
+    {
+
+
+        Typeface tf = Typeface.createFromAsset(getAssets(), "Lobster.otf");
+        TextView tv = (TextView) findViewById(R.id.txtv_header);
+        tv.setTypeface(tf);
+        tv.setText("Notifications");
+
+
+        lv_following = (ListView) findViewById(R.id.lv_following);
+
+        adapter = new FavouriteFollowing_Adapter(con);
+
+        lv_following.setAdapter(adapter);
     }
 
 
 
-    private void setTabs()
+   /* private void setTabs()
     {
         Typeface tf = Typeface.createFromAsset(getAssets(),"Lobster.otf");
         TextView tv = (TextView) findViewById(R.id.txtv_header);
@@ -57,9 +83,9 @@ public class Favourite extends TabActivity
         addTab("FOLLOWING", FavouriteFollowing.class);
         addTab("YOU", FavouriteFollowing.class);
 
-    }
+    }*/
 
-    private void addTab(String labelId, Class<?> c)
+  /*  private void addTab(String labelId, Class<?> c)
     {
         Intent intent = new Intent(this, c);
 
@@ -86,5 +112,5 @@ public class Favourite extends TabActivity
             tabHost.getTabWidget().getChildAt(i).setBackgroundColor(con.getResources().getColor(R.color.GrayTabLight)); //unselected
         }
         tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundColor(getResources().getColor(R.color.GrayTabDark)); // selected
-    }
+    }*/
 }

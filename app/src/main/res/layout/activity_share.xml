@@ -2,123 +2,130 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/Background_Gray"
+              android:background="@color/White"
               android:orientation="vertical">
 
 
     <include layout="@layout/header"/>
 
-   <!-- <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">-->
+    <!-- <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">-->
 
-        <ScrollView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/Background_Gray"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:background="@mipmap/share_image"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Write a caption..."/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/White"
                     android:orientation="vertical">
 
 
-                    <LinearLayout
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/White"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="160dp"
-                            android:layout_margin="5dp"
-                            android:background="@mipmap/share_image"/>
-
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:hint="Write a caption..."/>
-                    </LinearLayout>
+                        android:layout_margin="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:drawableLeft="@mipmap/ic_like_round"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Like 1"
+                        android:padding="5dp"/>
 
 
-                    <LinearLayout
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_like_round"
+                        android:gravity="right|center_vertical"
+                        android:hint="Like 2"
+                        android:padding="5dp"/>
+
+
+                    <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/White"
-                        android:orientation="vertical">
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:drawableLeft="@mipmap/ic_like_round"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="Like 3"
+                        android:padding="5dp"/>
 
 
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:drawableLeft="@mipmap/ic_like_gray"
-                            android:drawablePadding="10dp"
-                            android:hint="Like 1"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/round_corner_gray"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/ic_like_round"
+                        android:gravity="right|center_vertical"
+                        android:hint="Like 4"
+                        android:padding="5dp"/>
 
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:drawableLeft="@mipmap/ic_like_gray"
-                            android:drawablePadding="10dp"
-                            android:hint="Like 2"/>
-
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:drawableLeft="@mipmap/ic_like_gray"
-                            android:drawablePadding="10dp"
-                            android:hint="Like 3"/>
-
-
-                        <EditText
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"
-                            android:drawableLeft="@mipmap/ic_like_gray"
-                            android:drawablePadding="10dp"
-                            android:hint="Like 4"/>
-
-
-                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
-        </ScrollView>
+
+        </LinearLayout>
+    </ScrollView>
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/selector_blue"
-            android:clickable="true"
-            android:gravity="center"
-            android:padding="15dp"
-            android:text="Post"
-            android:textColor="@color/White"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/selector_blue"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Post"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
-   <!-- </FrameLayout>-->
+    <!-- </FrameLayout>-->
 
 </LinearLayout>
